@@ -17,10 +17,12 @@ services:
   wordpress:
     depends_on: 
       - db
-    image: wordpress:5.1.1-fpm-alpine
+    image: wordpress:php8.1
     container_name: wordpress
     restart: unless-stopped
     env_file: .env
+    ports:
+      - '8000:80'
     environment:
       - WORDPRESS_DB_HOST=db:3306
       - WORDPRESS_DB_USER=$MYSQL_USER
@@ -28,6 +30,7 @@ services:
       - WORDPRESS_DB_NAME=wordpress
     volumes:
       - wordpress:/var/www/html
+      - ./wordpress:/var/www/html
     networks:
       - app-network
 
@@ -41,6 +44,20 @@ services:
     volumes:
       - ./data:/data
       - ./letsencrypt:/etc/letsenc
+    networks:
+      - app-network
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST= db
+      - UPLOAD_LIMIT= 100000000
+    networks:
+      - app-network
 
 volumes:
   wordpress:

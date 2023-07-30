@@ -1,5 +1,0 @@
-2023/07/29 01:34:12 [warn] 237#237: 512 worker_connections are not enough, reusing connections
-2023/07/29 01:34:12 [alert] 237#237: 512 worker_connections are not enough
-2023/07/29 01:34:12 [error] 237#237: *618 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /apple-touch-icon-precomposed.png HTTP/1.1", upstream: "http://127.0.0.1:80/apple-touch-icon-precomposed.png", host: "localhost"
-2023/07/29 01:34:12 [alert] 237#237: 512 worker_connections are not enough
-2023/07/29 01:34:12 [error] 237#237: *1363 recv() failed (104: Connection reset by peer) while reading response header from upstream, client: 127.0.0.1, server: localhost-nginx-proxy-manager, request: "GET /apple-touch-icon.png HTTP/1.1", upstream: "http://127.0.0.1:80/apple-touch-icon.png", host: "localhost"

@@ -1,2 +1,0 @@
-2023/07/29 01:55:47 [error] 1630#1630: *32 wordpress could not be resolved (3: Host not found), client: 172.24.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost", referrer: "http://localhost:81/"
-2023/07/29 01:55:47 [error] 1630#1630: *32 wordpress could not be resolved (3: Host not found), client: 172.24.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
